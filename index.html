@@ -3,8 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Image to PDF</title>
-  <link rel="icon" href="data:,">
+  <title>PicPDF Studio - Free Image to PDF Converter</title>
+  <meta name="description" content="Convert JPG, PNG, WebP, GIF, and text files into one PDF in your browser. Reorder files, match image page size, and download privately without uploading files.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1769e0">
+  <link rel="canonical" href="https://debbie8820.github.io/image-to-pdf/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231769e0'/%3E%3Cpath d='M18 14h20l8 8v28H18z' fill='white'/%3E%3Cpath d='M38 14v10h8' fill='%23d7e7ff'/%3E%3Cpath d='M23 39l7-8 5 5 4-5 6 8z' fill='%231769e0'/%3E%3Ccircle cx='27' cy='27' r='3' fill='%231769e0'/%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PicPDF Studio - Free Image to PDF Converter">
+  <meta property="og:description" content="Create a PDF from images and text files directly in your browser. Arrange pages, avoid extra margins, and download privately.">
+  <meta property="og:url" content="https://debbie8820.github.io/image-to-pdf/">
+  <meta property="og:site_name" content="PicPDF Studio">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PicPDF Studio - Free Image to PDF Converter">
+  <meta name="twitter:description" content="Convert images to PDF locally in your browser with drag-and-drop ordering.">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PicPDF Studio",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://debbie8820.github.io/image-to-pdf/",
+      "description": "A free browser-based image to PDF converter that supports drag-and-drop ordering and local PDF creation.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Convert JPG, PNG, WebP, GIF, and text files to PDF",
+        "Reorder files before creating a PDF",
+        "Match PDF page size to each image",
+        "Process files locally in the browser"
+      ]
+    }
+  </script>
   <style>
     :root {
       color-scheme: light;
@@ -587,8 +621,8 @@
   <script>
     const translations = {
       zh: {
-        appTitle: "圖片轉 PDF",
-        lead: "拖曳圖片、調整順序，下載成一份 PDF。",
+        appTitle: "PicPDF Studio",
+        lead: "免費圖片轉 PDF 工具。拖曳圖片、調整順序，在瀏覽器中私密完成轉換。",
         darkMode: "深色模式",
         lightMode: "淺色模式",
         clear: "清空",
@@ -630,8 +664,8 @@
         remove: "移除"
       },
       en: {
-        appTitle: "Image to PDF",
-        lead: "Drop images, adjust the order, and download one PDF.",
+        appTitle: "PicPDF Studio",
+        lead: "A free image to PDF converter. Drop images, adjust the order, and create a private PDF in your browser.",
         darkMode: "Dark mode",
         lightMode: "Light mode",
         clear: "Clear",
@@ -720,7 +754,9 @@
 
     function applyLanguage() {
       document.documentElement.lang = state.lang === "zh" ? "zh-Hant" : "en";
-      document.title = t("appTitle");
+      document.title = state.lang === "zh"
+        ? "PicPDF Studio - 免費圖片轉 PDF 工具"
+        : "PicPDF Studio - Free Image to PDF Converter";
       els.languageLabel.textContent = state.lang === "zh" ? "中文" : "EN";
       els.languageToggle.setAttribute("aria-label", state.lang === "zh" ? "切換語言" : "Switch language");
       document.querySelectorAll("[data-i18n]").forEach((node) => {

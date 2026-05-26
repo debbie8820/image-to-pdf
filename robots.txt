@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://debbie8820.github.io/image-to-pdf/sitemap.xml
